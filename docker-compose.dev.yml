@@ -1,0 +1,23 @@
+version: '2.0'
+services:
+    home:
+        build:
+            context: ./home
+        ports:
+            - '3000:80'
+        container_name: home
+        stdin_open: true
+    mf-hr:
+        build:
+            context: ./hr
+        ports:
+            - '3001:80'
+        container_name: mf-hr
+        stdin_open: true
+    mf-finance:
+        build:
+            context: ./finance
+        ports:
+            - '3002:80'
+        container_name: mf-finance
+        stdin_open: true
